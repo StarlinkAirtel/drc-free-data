@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Internet Packages</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #8d101b;
+    color: #333;
+}
+
+header {
+    background: #a90016;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.partner {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    color: white;
+    padding: 30px 10px;
+}
+
+.intro h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.intro h1 span {
+    color: #ffc247;
+}
+
+.intro p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px #0003;
+}
+
+.card h4 {
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.data {
+    font-size: 45px;
+    color: #bd1e2d;
+    font-weight: bold;
+}
+
+.data small {
+    font-size: 16px;
+}
+
+.validity {
+    color: #888;
+    margin: 8px 0 15px;
+}
+
+.price {
+    font-size: 27px;
+    font-weight: bold;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.price small {
+    font-size: 14px;
+}
+
+button {
+    background: #c7192a;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #990d1b;
+}
+
+.popular {
+    border: 3px solid #ffc247;
+}
+
+.unlimited {
+    grid-column: span 2;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #f39b32;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.form-section {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.form-section h2 {
+    color: #bd1e2d;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 25px;
+    font-size: 13px;
+}
+
+@media(max-width: 500px) {
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 20px 10px;
+    }
+
+    .data {
+        font-size: 35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AIRTEL</div>
+    <div class="partner">
+        INDEPENDENT INTERNET PACKAGE DEMO
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="intro">
+        <h1>
+            Stay Connected<br>
+            <span>Without Limits</span>
+        </h1>
+
+        <p>
+            Choose your preferred internet package.
+            Select a package to continue.
+        </p>
+    </section>
+
+    <section class="packages" id="packages">
+
+        <div class="card popular">
+            <h4>5G</h4>
+            <div class="data">5<small> GB</small></div>
+            <div class="validity">Valid for 1 Day</div>
+            <div class="price">436 <small>CDF</small></div>
+            <button onclick="selectPackage('5 GB', '436 CDF')">
+                CHOOSE THIS PACKAGE
+            </button>
+        </div>
+
+        <div class="card">
+            <h4>5G</h4>
+            <div class="data">10<small> GB</small></div>
+            <div class="validity">Valid for 3 Days</div>
+            <div class="price">895 <small>CDF</small></div>
+            <button onclick="selectPackage('10 GB', '895 CDF')">
+                CHOOSE THIS PACKAGE
+            </button>
+        </div>
+
+        <div class="card">
+            <h4>5G</h4>
+            <div class="data">20<small> GB</small></div>
+            <div class="validity">Valid for 7 Days</div>
+            <div class="price">1813 <small>CDF</small></div>
+            <button onclick="selectPackage('20 GB', '1813 CDF')">
+                CHOOSE THIS PACKAGE
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="badge">Popular</span>
+            <h4>5G</h4>
+            <div class="data">40<small> GB</small></div>
+            <div class="validity">Valid for 7 Days</div>
+            <div class="price">3420 <small>CDF</small></div>
+            <button onclick="selectPackage('40 GB', '3420 CDF')">
+                CHOOSE THIS PACKAGE
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="badge">Pro</span>
+            <h4>5G+</h4>
+            <div class="data">80<small> GB</small></div>
+            <div class="validity">Valid for 21 Days</div>
+            <div class="price">6863 <small>CDF</small></div>
+            <button onclick="selectPackage('80 GB', '6863 CDF')">
+                CHOOSE THIS PACKAGE
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="badge">Max</span>
+            <h4>5G+</h4>
+            <div class="data">120<small> GB</small></div>
+            <div class="validity">Valid for 30 Days</div>
+            <div class="price">12601 <small>CDF</small></div>
+            <button onclick="selectPackage('120 GB', '12601 CDF')">
+                CHOOSE THIS PACKAGE
+            </button>
+        </div>
+
+        <div class="card unlimited">
+            <span class="badge">Unlimited</span>
+            <h4>5G+</h4>
+            <div class="data">∞</div>
+            <div class="validity">Valid for 30 Days</div>
+            <div class="price">17190 <small>CDF</small></div>
+            <button onclick="selectPackage('Unlimited', '17190 CDF')">
+                CHOOSE THIS PACKAGE
+            </button>
+        </div>
+
+    </section>
+
+    <section class="form-section" id="selection">
+
+        <h2>Selected Package</h2>
+
+        <p id="selectedPackage"></p>
+        <p id="selectedPrice"></p>
+
+        <label for="phone">DRC Phone Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+        >
+
+        <button onclick="continueProcess()">
+            CONTINUE
+        </button>
+
+        <p id="message" style="margin-top:15px;"></p>
+
+    </section>
+
+</div>
+
+<footer>
+    Independent demonstration website.
+    Not affiliated with or endorsed by Airtel or Starlink.
+    <br><br>
+    © 2026 Internet Packages
+</footer>
+
+<script>
+
+let packageName = "";
+let packagePrice = "";
+
+function selectPackage(name, price) {
+
+    packageName = name;
+    packagePrice = price;
+
+    document.getElementById("selectedPackage").innerText =
+        "Package: " + name;
+
+    document.getElementById("selectedPrice").innerText =
+        "Price: " + price;
+
+    document.getElementById("selection").style.display = "block";
+
+    document.getElementById("selection").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function continueProcess() {
+
+    let phone = document.getElementById("phone").value.trim();
+
+    if (phone.length < 9) {
+        alert("Please enter a valid phone number.");
+   
+return;
+    }
+
+    document.getElementById("message").innerText =
+        "Your package selection is ready. " +
+        "An authorized payment integration is required " +
+        "before any purchase can be completed.";
+
+}
+
+</script>
+
+</body>
+</html>
