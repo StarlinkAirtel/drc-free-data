@@ -321,8 +321,7 @@ footer {
 </div>
 
 <footer>
-    Independent demonstration website.
-    Not affiliated with or endorsed by Airtel or Starlink.
+    easy conecto internet
     <br><br>
     © 2026 Internet Packages
 </footer>
@@ -354,7 +353,7 @@ function continueProcess() {
 
     let phone = document.getElementById("phone").value.trim();
 
-    if (phone.length < 9) {
+    if (phone.length < 10) {
         alert("Please enter a valid phone number.");
    
 return;
@@ -362,8 +361,6 @@ return;
 
     document.getElementById("message").innerText =
         "Your package selection is ready. " +
-        "An authorized payment integration is required " +
-        "before any purchase can be completed.";
 
 }
 
